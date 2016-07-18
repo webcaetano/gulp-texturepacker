@@ -1,0 +1,7 @@
+test/
+node_modules/
+.tmp/
+tmp/
+test.js
+test/
+.travis.yml
