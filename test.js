@@ -24,7 +24,7 @@ describe('gulp-plugin', function() {
 
 	it('create atlas with options', function(done) {
 		del.sync(['test/dist/*']);
-		gulp.src('test/atlas.tps')
+		gulp.src(['test/*.tps'])
 		.pipe(self({
 			sheet:'./test/dist/main.png',
 			data:'./test/dist/data.json'
@@ -36,8 +36,6 @@ describe('gulp-plugin', function() {
 			done();
 			cb();
 		}))
-		// .pipe(gulp.dest('./'))
-		// done();
 
 		this.timeout(8000);
 	});
