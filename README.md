@@ -1,6 +1,6 @@
 # gulp-texturepacker
 
-[![npm][npm-img]][npm-url] [![travis][travis-img]][travis-url]
+[![npm][npm-img]][npm-url]
 
 Gulp plugin for TexturePacker
 
@@ -61,5 +61,3 @@ The MIT [License](https://raw.githubusercontent.com/webcaetano/gulp-texturepacke
 
 [npm-img]: https://img.shields.io/npm/v/gulp-texturepacker.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/gulp-texturepacker
-[travis-img]: https://img.shields.io/travis/webcaetano/gulp-texturepacker.svg?style=flat-square
-[travis-url]: https://travis-ci.org/webcaetano/gulp-texturepacker
