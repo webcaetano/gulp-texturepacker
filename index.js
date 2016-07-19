@@ -1,21 +1,45 @@
 'use strict';
-var gutil = require('gulp-util');
 var through = require('through2');
 var path = require('path');
 var fs = require('fs');
-var lodash = require('lodash');
+var _ = require('lodash');
+var exec = require('child_process').exec;
 
 // insert defaults here
 var defaults = {
-
+	log:true,
+	sheet:null,
+	textureFormat:null,
+	data:null,
+	format:null,
+	backgroundColor:null,
 }
 
 var self = function(options){
-	options = utils.extend({},defaults,options);
-	// out put erros example
-	// if (file.isStream()) return callback(new gutil.PluginError('gulp-flash', 'Streaming not supported'));
-	return through.obj(function (file, enc, callback) {
+	options = _.extend({},defaults,options);
 
+	var argsAvaible = [
+		'sheet',
+		'textureFormat',
+		'data',
+		'format',
+		'backgroundColor',
+	];
+
+	return through.obj(function (file, enc, done) {
+		var args = _.reduce(_.pick(options,argsAvaible),function(resp,val,i){
+			if(val!==null){
+				resp.push('--'+_.kebabCase(i)+' '+val);
+			}
+
+			return resp;
+		},[]).join(" ");
+
+		exec('TexturePacker '+file.path+' '+args, function(err, stdout, stderr){
+			if(options.log) console.log(stdout);
+
+			done(err,file);
+		})
 	})
 }
 

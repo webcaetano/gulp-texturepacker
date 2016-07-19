@@ -9,12 +9,13 @@
     "test": "mocha test.js"
   },
   "dependencies": {
-    "gulp-util": "^3.0.7",
     "lodash": "^4.13.1",
     "through2": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^3.4.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
     "mocha": "^2.3.3"
   },
   "keywords": [
