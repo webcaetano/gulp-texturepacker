@@ -1,6 +1,6 @@
 {
   "name": "gulp-texturepacker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp plugin for TexturePacker",
   "main": "index.js",
   "author": "Andre Caetano",

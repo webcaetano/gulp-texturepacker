@@ -52,6 +52,11 @@ Full list at TexturePacker --help
 
 background color format `FFFFFF`.
 
+#### log
+
+Type `Boolean` Default `false`<br>
+Display logs
+
 ---------------------------------
 
 The MIT [License](https://raw.githubusercontent.com/webcaetano/gulp-texturepacker/master/LICENSE.md)

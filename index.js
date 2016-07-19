@@ -7,7 +7,7 @@ var exec = require('child_process').exec;
 
 // insert defaults here
 var defaults = {
-	log:true,
+	log:false,
 	sheet:null,
 	textureFormat:null,
 	data:null,
