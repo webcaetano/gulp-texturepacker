@@ -52,9 +52,6 @@ Full list at TexturePacker --help
 
 background color format `FFFFFF`.
 
-
-[![npm](https://nodei.co/npm/gulp-texturepacker.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-texturepacker)
-
 ---------------------------------
 
 The MIT [License](https://raw.githubusercontent.com/webcaetano/gulp-texturepacker/master/LICENSE.md)
