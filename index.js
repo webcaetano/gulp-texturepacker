@@ -27,9 +27,10 @@ var self = function(options){
 	];
 
 	return through.obj(function (file, enc, done) {
+		var filename = path.basename(file.path, path.extname(file.path));
 		var args = _.reduce(_.pick(options,argsAvaible),function(resp,val,i){
 			if(val!==null){
-				resp.push('--'+_.kebabCase(i)+' '+val);
+				resp.push('--'+_.kebabCase(i)+' '+val.toString().replace('%name%', filename));
 			}
 
 			return resp;
